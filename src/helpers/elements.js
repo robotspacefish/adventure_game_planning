@@ -6,8 +6,7 @@ function createElement(type, id = '', classes = []) {
   const element = document.createElement(type);
   if (id) element.id = id;
   if (classes) {
-    let cl = '';
-    classes.forEach(className => element.classList.add(cl));
+    classes.forEach(className => element.classList.add(className));
   }
 }
 
