@@ -1,16 +1,19 @@
-function createElement(type, id = '', classes = [], textContent = '') {
+function createElement(type, id = '', classes = '', textContent = '') {
+  // Error checks
   if (!type) throw new Error('Element type required.');
+
   if (id && typeof id !== 'string') throw new Error('id must be type string');
-  if (classes.length !== 0 && !Array.isArray(classes)) throw new Error('classes must be an array.');
+
+  if (classes && typeof classes !== 'string') throw new Error('classes must be type string. Each class name should be separated by a space within the same string.');
+
   if (textContent && typeof textContent !== 'string') throw new Error('id must be type string');
 
+  // create element & set attributes
   const element = document.createElement(type);
 
   if (id) element.id = id;
 
-  if (classes) {
-    classes.forEach(className => element.classList.add(className));
-  }
+  if (classes) element.setAttribute('class', classes);
 
   if (textContent) element.textContent = textContent;
 
