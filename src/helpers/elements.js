@@ -1,4 +1,5 @@
 /**
+ * Creates and returns HTML element with the provided attributes
  * @param {string} type type of element
  * @param {string} id  id of element
  * @param {string} classes 1 or more class names, separated by a space
