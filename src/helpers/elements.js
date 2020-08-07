@@ -14,7 +14,7 @@ function createElement(type, id = '', classes = '', textContent = '') {
 
   if (classes && typeof classes !== 'string') throw new Error('classes must be type string. Each class name should be separated by a space within the same string.');
 
-  if (textContent && typeof textContent !== 'string') throw new Error('id must be type string');
+  if (textContent && typeof textContent !== 'string') throw new Error('text must be type string');
 
   // create element & set attributes
   const element = document.createElement(type);
