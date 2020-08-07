@@ -1,3 +1,10 @@
+/**
+ * @param {string} type type of element
+ * @param {string} id  id of element
+ * @param {string} classes 1 or more class names, separated by a space
+ * @param {string} textContent text to display inside the element
+ * @return {string} element
+ */
 function createElement(type, id = '', classes = '', textContent = '') {
   // Error checks
   if (!type) throw new Error('Element type required.');
