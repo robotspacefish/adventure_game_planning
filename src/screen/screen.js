@@ -5,11 +5,11 @@ class Screen {
   constructor(parent) {
     this._gameTextOutput = '';
     this._screenContainer = createElement('div', 'js-screen-container');
-    parent.appendChild(this._screenContainer)
+    parent.append(this._screenContainer)
   }
 
   appendToContainer(child) {
-    this._screenContainer.appendChild(child);
+    this._screenContainer.append(child);
   }
 
   get screenContainer() {
