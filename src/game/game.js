@@ -36,6 +36,13 @@ class Game {
     this.screen.init('Adventure Game', 'Let the Adventure Begin', this.start.bind(this));
   }
 
+  clearGameParentDiv() {
+    const parent = this.gameParentDiv;
+    while (parent.hasChildNodes()) {
+      parent.removeChild(parent.childNodes[0])
+    }
+  }
+
   start() {
     console.log('start game')
   }
