@@ -1,0 +1,29 @@
+:root {
+  --main-bg-color: #000;
+  --main-text-color: #22af37;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  font-size: 18px;
+}
+
+.container-general {
+  width: 100vw;
+  height: 100vh;
+  color: var(--main-text-color);
+}
+
+.btn {
+  padding: 10px;
+  background-color: var(--main-text-color);
+  border: none;
+  cursor: pointer;
+  font-size: inherit;
+}
