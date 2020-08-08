@@ -2,11 +2,11 @@ import Screen from '../screen/screen';
 import { createElement } from '../helpers/elements';
 
 class Game {
-  constructor(parentDivId, startFn) {
-    this._gameParentDiv = createElement('div', parentDivId);
-    this.screen;
+  constructor() {
+    this._gameParentDiv = createElement('div', 'js-game');
     this.mode = 'title';
-    this.init(startFn);
+    this.screen;
+    this.init();
 
   }
 
@@ -14,17 +14,14 @@ class Game {
     return this._gameParentDiv;
   }
 
-  init(startFn) {
-    document.querySelector('body').prepend(this.gameParentDiv)
+  init() {
+    document.querySelector('body').prepend(this.gameParentDiv);
     this.screen = new Screen(this.gameParentDiv);
-    this.screen[this.mode]('Adventure Game', 'Let the Adventure Begin', this[startFn].bind(this));
+    this.screen[this.mode]('Adventure Game', 'Let the Adventure Begin', this.start);
   }
 
-  test() {
-    console.log('test', this)
-  }
-  test2() {
-    console.log('test2', this)
+  start() {
+    console.log('start game')
   }
 }
 
