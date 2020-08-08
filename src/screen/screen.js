@@ -15,4 +15,20 @@ class Screen {
   get screenContainer() {
     return this._screenContainer;
   }
+
+  title(titleText, startBtnText, callback) {
+    const startBtn = createElement('button', 'js-start-button', 'start-btn btn', startBtnText);
+
+    this.appendToContainer(
+      createElement('h1', 'title', '', titleText)
+    );
+
+    this.appendToContainer(startBtn);
+
+    startBtn.addEventListener('click', callback);
+  }
+
+
+}
+
 export default Screen;
