@@ -18,7 +18,7 @@ class Game {
   }
 
   set mode(newMode) {
-    this._mode = newMode;
+    this._mode = newMode.toLowerCase();
   }
 
   get screen() {
