@@ -1,6 +1,22 @@
-.screen {
+.screen-container {
+  border: 1px solid #333;
+  width: 90%;
   height: 90%;
-  flex: 1;
+  border-radius: 10px;
   padding: 10px;
-  overflow-y: auto;
+}
+
+#js-title-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* .js-start-button {
+
+} */
+
+#js-play-screen {
+
 }
