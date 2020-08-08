@@ -3,8 +3,12 @@ import { createElement } from '../helpers/elements';
 
 class Game {
   constructor(parentDivId, startFn) {
-    this.gameParentDiv = createElement('div', parentDivId);
+    this._gameParentDiv = createElement('div', parentDivId);
     this.init(startFn);
+  }
+
+  get gameParentDiv() {
+    return this._gameParentDiv;
   }
 
   init(startFn) {
