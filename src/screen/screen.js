@@ -5,7 +5,7 @@ class Screen {
   constructor(parent, type) {
     this._gameTextOutput = '';
     this._type = type;
-    this._screenContainer = createElement('div', 'js-screen-container');
+    this._screenContainer = createElement('div', `${type}-screen`, 'screen-container');
     parent.append(this._screenContainer)
   }
 
