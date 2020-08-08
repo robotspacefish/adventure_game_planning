@@ -4,7 +4,9 @@ import { createElement } from '../helpers/elements';
 class Game {
   constructor(parentDivId, startFn) {
     this._gameParentDiv = createElement('div', parentDivId);
+    this.screen;
     this.init(startFn);
+
   }
 
   get gameParentDiv() {
@@ -13,7 +15,8 @@ class Game {
 
   init(startFn) {
     document.querySelector('body').prepend(this.gameParentDiv)
-    new Screen(this.gameParentDiv).title('Adventure Game', 'Let the Adventure Begin', this[startFn].bind(this));
+    this.screen = new Screen(this.gameParentDiv);
+    this.screen.title('Adventure Game', 'Let the Adventure Begin', this[startFn].bind(this));
   }
 
   test() {
