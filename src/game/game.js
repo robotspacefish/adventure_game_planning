@@ -5,6 +5,7 @@ class Game {
   constructor(parentDivId, startFn) {
     this._gameParentDiv = createElement('div', parentDivId);
     this.screen;
+    this.mode = 'title';
     this.init(startFn);
 
   }
@@ -16,7 +17,7 @@ class Game {
   init(startFn) {
     document.querySelector('body').prepend(this.gameParentDiv)
     this.screen = new Screen(this.gameParentDiv);
-    this.screen.title('Adventure Game', 'Let the Adventure Begin', this[startFn].bind(this));
+    this.screen[this.mode]('Adventure Game', 'Let the Adventure Begin', this[startFn].bind(this));
   }
 
   test() {
