@@ -18,6 +18,9 @@ class Screen {
       case 'title':
         this.title(arguments);
         break;
+      case 'play':
+        this.play(arguments);
+        break;
       default:
         throw new Error('That screen type does not exist.')
     }
@@ -42,6 +45,10 @@ class Screen {
     this.appendToContainer(startBtn);
 
     startBtn.addEventListener('click', callback);
+  }
+
+  play() {
+    this.appendToContainer(createElement('h1', '', '', 'Play Screen')) // testing
   }
 
 
