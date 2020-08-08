@@ -17,7 +17,7 @@ class Game {
   init() {
     document.querySelector('body').prepend(this.gameParentDiv);
     this.screen = new Screen(this.gameParentDiv);
-    this.screen[this.mode]('Adventure Game', 'Let the Adventure Begin', this.start);
+    this.screen.title('Adventure Game', 'Let the Adventure Begin', this.start);
   }
 
   start() {
