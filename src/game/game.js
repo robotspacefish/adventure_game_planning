@@ -44,7 +44,11 @@ class Game {
   }
 
   start() {
-    console.log('start game')
+    this.clearGameParentDiv();
+    this.mode = 'play';
+
+    this.setNewScreen();
+    this.screen.init();
   }
 }
 
