@@ -4,14 +4,30 @@ import { createElement } from '../helpers/elements';
 class Game {
   constructor() {
     this._gameParentDiv = createElement('div', 'js-game');
-    this.mode = 'title';
-    this.screen;
+    this._mode = 'title';
+    this._screen;
     this.init();
-
   }
 
   get gameParentDiv() {
     return this._gameParentDiv;
+  }
+
+  get mode() {
+    return this._mode;
+  }
+
+  set mode(newMode) {
+    this._mode = newMode;
+  }
+
+  get screen() {
+    return this._screen;
+  }
+
+  setNewScreen() {
+    // TODO error handling
+    this._screen = new Screen(this.gameParentDiv, this.mode);
   }
 
   init() {
