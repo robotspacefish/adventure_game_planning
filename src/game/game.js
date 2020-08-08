@@ -32,8 +32,8 @@ class Game {
 
   init() {
     document.querySelector('body').prepend(this.gameParentDiv);
-    this.screen = new Screen(this.gameParentDiv);
-    this.screen.title('Adventure Game', 'Let the Adventure Begin', this.start);
+    this.setNewScreen();
+    this.screen.init('Adventure Game', 'Let the Adventure Begin', this.start.bind(this));
   }
 
   start() {
