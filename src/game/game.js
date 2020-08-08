@@ -1,9 +1,10 @@
 import Screen from '../screen/screen';
 import { createElement } from '../helpers/elements';
+import './game.css';
 
 class Game {
   constructor() {
-    this._gameParentDiv = createElement('div', 'js-game');
+    this._gameParentDiv = createElement('div', 'js-game', 'game-container container-general');
     this._mode = 'title';
     this._screen;
     this.init();

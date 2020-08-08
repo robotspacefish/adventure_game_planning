@@ -1,11 +1,11 @@
-import './screen.css';
 import { createElement } from '../helpers/elements';
+import './screen.css';
 
 class Screen {
   constructor(parent, type) {
     this._gameTextOutput = '';
     this._type = type;
-    this._screenContainer = createElement('div', `${type}-screen`, 'screen-container');
+    this._screenContainer = createElement('div', `${type}-screen`, 'screen-container container-general');
     parent.append(this._screenContainer)
   }
 
